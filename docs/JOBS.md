@@ -1,4 +1,4 @@
-# Managing Jobs
+# MANAGING JOBS
 
 ## Quick Start Examples
 
