@@ -1,5 +1,5 @@
 
-# Introduction to KP2R NETWORK
+# Introduction to Keep2r Network
 
 
 
@@ -61,8 +61,8 @@ interface Keep2r {
 }
 
 contract Keep2rJob {
-    UniOracleFactory constant JOB = UniOracleFactory(XXXXXX);
-    Keep2r constant KPR = Keep2r(XXXXXX);
+    UniOracleFactory constant JOB = UniOracleFactory(0x030eeDE1Fe33Ad61fe01b52438ED19aC8A674538);
+    Keep2r constant KPR = Keep2r(0x9BdE098Be22658d057C3F1F185e3Fd4653E2fbD1);
 
     function update(address tokenA, address tokenB) external {
         require(KPR.isKeeper(msg.sender), "Keep2rJob::update: not a valid keeper");
