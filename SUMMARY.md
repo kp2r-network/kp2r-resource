@@ -6,7 +6,8 @@
 * [Keepers](docs/Keepers.md)
 * [Governance](docs/Governance.md)
 * [Registry](REGISTRY.md)
+* [KP2R](docs/Keep2r.md)
+* [SafeMath](docs/SafeMath.md)
 
-* [Technical](docs/Keep3r.md)
-
+* [Dapp](https://kp2r.network)
 * [GitHub](https://github.com/kp2r-network/kp2r-network-core)
