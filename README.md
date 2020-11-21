@@ -58,7 +58,7 @@ KP2R jobs implement a function called work
 
 ### 5. Start the Work
 
-[![N|Solid](https://github.com/kp2r-network/howto-job/blob/master/work-connect.png)](https://kp2r.network/)
+[![N|Solid](https://raw.githubusercontent.com/kp2r-network/howto-job/master/work-connect.png)](https://kp2r.network/)
 
 As a simple keeper, you only need to call work and you will receive KP2R.
 

@@ -1,7 +1,7 @@
 # TABLE OF CONTENTS
 
 * [Introduction](README.md)
-
+* [How to Perform a Job](How-to-Jobs.md)
 * [Jobs](docs/JOBS.md)
 * [Keepers](docs/Keepers.md)
 * [Governance](docs/Governance.md)
