@@ -1,85 +1,70 @@
-
-# Introduction to Keep2r Network
-
+# Keep2r Network (KP2R) Origin & How to Complete a Keepers Job
 
 
-Keep2r Network is a decentralized keeper network for projects that need external devops and for external teams to find keeper jobs
+## KP2R Network
+An Advanced & Incentive Enabled Decentralize Financial System
 
-## Keepers
+Inspired by Andre Cronje’s Keeper Network “Keep2r Network” idea was born. While the DeFi space was flooding with poor attempts on making a successful fork implementation of the real one, none actually had the core functionalities baked into them to able to be even called as a successful fork. The DeFi God had some clear qualities in his version of keeper but others upon failing on doing so made millions just by creating fake hypes in the DeFi space. Following on his footsteps Keep2r Network is committed to make all the necessary developments live first then put it out to users for evaluation. We believe real developers don’t ask for funds based upon fake promises rather putting the hard works first and then let the people decide its worth.
 
-A Keeper is the term used to refer to an external person and/or team that executes a job. This can be as simplistic as calling a transaction, or as complex as requiring extensive off-chain logic. The scope of Keep2r network is not to manage these jobs themselves, but to allow contracts to register as jobs for keepers, and keepers to register themselves as available to perform jobs. It is up to the individual keeper to set up their devops and infrastructure and create their own rules based on what transactions they deem profitable.
+Keep2r Network is doing just that, making developments live beforehand and then let you guys decide!
 
-## Jobs
+Keep2r Network is a decentralized keeper network inspired by the DeFi Guru ‘Andre Cronje’ needing external develops and for external teams to find keeper jobs. It’s basically can be described as a ‘Job Matching’ site.
 
-A Job is the term used to refer to a smart contract that wishes an external entity to perform an action. They would like the action to be performed in "good will" and not have a malicious result. For this reason they register as a job, and keepers can then execute on their contract.
 
-### Becoming a Keeper
+## How to use KP2R.Network
 
-To join as a Keeper you call ```bond(uint)``` on the Keep2r contract. You do not need to have KPR tokens to join as a Keeper, so you can join with ```bond(0)```. There is a 3 day bonding delay before you can activate as a Keeper. Once the 3 days have passed, you can call ```activate()```. Once activated you ```lastJob``` timestamp will be set to the current block timestamp.
+* Register the Bond
+* Bonds Pending
+* Activate Bonds
+* Your Jobs Running
+* Start the Work
 
-### Registering a Job
 
-A job can be any system that requires external execution, the scope of Keep2r is not to define or restrict the action taken, but to create an incentive mechanism for all parties involved. There are two cores ways to create a Job;
+### 1. Register the Bond
+Connect a wallet (KP2R Holding Wallet). Register the bond with your KP2R Token.
 
-#### Registering a Job via Governance
+[![N|Solid](https://raw.githubusercontent.com/kp2r-network/howto-job/master/1-register-bond.png)](https://kp2r.network/)
 
-If you prefer, you can register as a job by simply submitting a proposal via Governance, to include the contract as a job. If governance approves, no further steps are required.
 
-#### Registering a Job via Contract Interface
+### 2. Bonds Pending
 
-You can register as a job by calling ```addLiquidityToJob(address,uint)``` on the Keep2r contract. You must not have any current active jobs associated with this account. Calling ```addLiquidityToJob(address,uint)``` will create a pending Governance vote for the job specified by address in the function arguments. You are limited to submit a new job request via this address every ```14 days```.
+Your bond activation need 3 days. After 3 days open activate bonds button.
 
-## Job Interface
+[![N|Solid](https://raw.githubusercontent.com/kp2r-network/howto-job/master/2-bond-pending.png)](https://kp2r.network/)
 
-Some contracts require external event execution, an example for this is the ```harvest()``` function in the yearn ecosystem, or the ```update(address,address)``` function in the uniquote ecosystem. These normally require a restricted access control list, however these can be difficult for fully decentralized projects to manage, as they lack devops infrastructure.
+After the bonding period of 3 days you will be able to select activate.
 
-These interfaces can be broken down into two types, no risk delta (something like ```update(address,address)``` in uniquote, which needs to be executed, but not risk to execution), and ```harvest()``` in yearn, which can be exploited by malicious actors by front-running deposits.
 
-For no, or low risk executions, you can simply call ```Keep2r.isKeeper(msg.sender)``` which will let you know if the given actor is a keeper in the network.
+### 3. Activate Bonds
 
-For high, sensitive, or critical risk executions, you can specify a minimum bond, minimum jobs completed, and minimum Keeper age required to execute this function. Based on these 3 limits you can define your own trust ratio on these keepers.
+After 3 days complete your activate bonds button is open. Click Activate Bonds.
 
-So a function definition would look as follows;
-```
-function execute() external {
-  require(Keep2r.isKeeper(msg.sender), "Keep2r not allowed");
-}
-```
+[![N|Solid](https://raw.githubusercontent.com/kp2r-network/howto-job/master/3-activate-bond.png)](https://kp2r.network/)
 
-At the end of the call, you simply need to call ```workReceipt(address,uint)``` to finalize the execution for the keeper network. In the call you specify the keeper being rewarded, and the amount of KPR you would like to award them with. This is variable based on what you deem is a fair reward for the work executed.
+Select the Jobs from KP2R Network jobs list.
 
-Example Keep2rJob
+Open your favorite Terminal and run these commands.
 
-```
-interface UniOracleFactory {
-    function update(address tokenA, address tokenB) external;
-}
 
-interface Keep2r {
-    function isKeeper(address) external view returns (bool);
-    function workReceipt(address keeper, uint amount) external;
-}
+### 4. Your Jobs Running
 
-contract Keep2rJob {
-    UniOracleFactory constant JOB = UniOracleFactory(0x030eeDE1Fe33Ad61fe01b52438ED19aC8A674538);
-    Keep2r constant KPR = Keep2r(0x9BdE098Be22658d057C3F1F185e3Fd4653E2fbD1);
+Your KP2R.Network keeper jobs are running. You are a Keep2r.
 
-    function update(address tokenA, address tokenB) external {
-        require(KPR.isKeeper(msg.sender), "Keep2rJob::update: not a valid keeper");
-        JOB.update(tokenA, tokenB);
-        KPR.workReceipt(msg.sender, 1e18);
-    }
-}
-```
+[![N|Solid](https://raw.githubusercontent.com/kp2r-network/howto-job/master/4-job-running.png)](https://kp2r.network/)
 
-### Job Credits
+You can view current available jobs, for now 5 Jobs is available, however more will be added.
 
-As mentioned in Job Interface, a job has a set amount of ```credits``` that they can award keepers with. To receive ```credits``` you do not need to purchase KPR tokens, instead you need to provide KPR-WETH liquidity in Uniswap. This will give you an amount of credits equal to the amount of KPR tokens in the liquidity you provide.
+KP2R jobs implement a function called work
 
-You can remove your liquidity at any time, so you do not have to keep buying new credits. Your liquidity provided is never reduced and as such you can remove it whenever you no longer would like a job to be executed.
+### 5. Start the Work
 
-To add credits, you simply need to have KPR-WETH LP tokens, you then call ```addLiquidityToJob(address,uint)``` specifying the job in the address and the amount in the uint. This will then transfer your LP tokens to the contract and keep them in escrow. You can remove your liquidity at any time by calling ```unbondLiquidityFromJob()```, this will allow you to remove the liquidity after 14 days by calling ```removeLiquidityFromJob()```
+[![N|Solid](https://github.com/kp2r-network/howto-job/blob/master/work-connect.png)](https://kp2r.network/)
 
-## Github
+As a simple keeper, you only need to call work and you will receive KP2R.
 
-[Keep2r](https://github.com/kp2r-network/kp2r-network-core)
+For details on registering a job or additional information please visit the documentation.
+
+**Real Earning from**
+**Real Keep2r Network**
+
+**Happy Keeping 🔒**
