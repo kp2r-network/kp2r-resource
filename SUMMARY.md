@@ -9,6 +9,5 @@
 * [KP2R](docs/Keep2r.md)
 * [SafeMath](docs/SafeMath.md)
 
-* [PRE-SALE](https://kp2r.network/pre-sale)
 * [Dapp](https://kp2r.network)
 * [GitHub](https://github.com/kp2r-network/kp2r-network-core)
