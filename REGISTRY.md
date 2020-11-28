@@ -34,12 +34,11 @@ Keep2rOracle | [0xEc76891767E27EF7DCf8CdFba660d4f95D7410B7](https://etherscan.io
 ## White listed Pairs
 Pairs | Address
 ----- | ------- 
-LBIETH | [0x2b452D00515C97b0168d4E89A10E1470c0c73382](https://info.uniswap.org/pair/0x2b452D00515C97b0168d4E89A10E1470c0c73382) 
-KP2RETH* | [0xbF89051f8d04ad770e2231E9335d3B7483A0A51F](https://info.uniswap.org/pair/0xbF89051f8d04ad770e2231E9335d3B7483A0A51F) 
-MKRETH | [0xc2adda861f89bbb333c90c492cb837741916a225](https://info.uniswap.org/pair/0xc2adda861f89bbb333c90c492cb837741916a225) 
-ETHUSDT | [0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852](https://info.uniswap.org/pair/0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852) 
-USDCETH | [0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc](https://info.uniswap.org/pair/0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc) 
-YFIETH | [0x2fdbadf3c4d5a8666bc06645b8358ab803996e28](https://info.uniswap.org/pair/0x2fdbadf3c4d5a8666bc06645b8358ab803996e28) 
+KP2RETH | [0xbF89051f8d04ad770e2231E9335d3B7483A0A51F](https://info.uniswap.org/pair/0xbF89051f8d04ad770e2231E9335d3B7483A0A51F) 
+KP2RUSDT | [0x946d518242D903467C2B6ecbee764A1eE41FF47b](https://info.uniswap.org/pair/0x946d518242D903467C2B6ecbee764A1eE41FF47b) 
+KP2RUSDC | [0xA4AbE9E36cB2e05858dAd13c465c5d7DAC0Cb946](https://info.uniswap.org/pair/0xA4AbE9E36cB2e05858dAd13c465c5d7DAC0Cb946) 
+KP2RsUSD | [0xeDA5D7a89EE464C96e4993D3Ba6Fd01ba7E234fb](https://info.uniswap.org/pair/0xeDA5D7a89EE464C96e4993D3Ba6Fd01ba7E234fb) 
+ 
 
 * MAIN LIQUIDITY PAIR
 
